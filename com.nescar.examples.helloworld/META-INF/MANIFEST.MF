@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Helloworld
+Bundle-SymbolicName: com.nescar.examples.helloworld;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.nescar.examples.helloworld.Activator
+Bundle-Vendor: NESCAR
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Automatic-Module-Name: com.nescar.examples.helloworld
+Bundle-ActivationPolicy: lazy
