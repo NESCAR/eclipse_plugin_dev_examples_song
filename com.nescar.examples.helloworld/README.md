@@ -1,12 +1,10 @@
 # helloworld
 
-## 效果
-
-* **菜单栏**
+* menus
 
   <img src="./img/HelloWorld_Appearance.png">
 
-* **工具栏**
+* toolbar
 
   <img src="./img/HelloWorld_Appearance_toolbar.png">
 
