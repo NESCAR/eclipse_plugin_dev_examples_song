@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
+<!--本例程解释地址：http://neyzoter.cn/wiki/EclipsePluginDev/#10%E5%BC%80%E5%8F%91%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%8F%92%E4%BB%B6%E9%A1%B9%E7%9B%AE-->
 <plugin>
-
+	<!--拓展点是commands，会输出到一个弹出的命令-->
    <extension
          point="org.eclipse.ui.commands">
       <category
@@ -30,6 +31,13 @@
             sequence="M1+6">
       </key>
    </extension>
+   <!--拓展点org.eclipse.ui.menus：1.菜单栏，即File、Edit等那一行；2.工具栏，添加了一个工具栏图标-->
+   	<!--menuContribution是menu的贡献，用于连接到操作，会从操作读取一些信息，见http://neyzoter.cn/wiki/EclipsePluginDev/#831-%E6%93%8D%E4%BD%9Caction%E4%B8%8E%E8%B4%A1%E7%8C%AEcontribution-->
+   		<!--locationURI是添加的位置-->
+   			<!--label是这个菜单的名称，这里是Sample Menu-->
+   			<!--command是添加的命令/操作-->
+   				<!--commandId是引用的Command-->
+   				<!--id是本次command的id-->
    <extension
          point="org.eclipse.ui.menus">
       <menuContribution
