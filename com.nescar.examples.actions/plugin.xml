@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.nescar.examples.actions.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="com.nescar.examples.actions.commands.category"
+            name="Sample Command"
+            id="com.nescar.examples.actions.commands.sampleCommand">
+      </command>
+      <command
+            categoryId="com.nescar.examples.actions.commands.nescInfoCategory"
+            id="com.nescar.examples.actions.commands.nescInfoCommand"
+            name="Nesc Info Command">
+      </command>
+      <category
+            id="com.nescar.examples.actions.commands.nescInfoCategory"
+            name="Nesc Info Category">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.nescar.examples.actions.handlers.SampleHandler"
+            commandId="com.nescar.examples.actions.commands.sampleCommand">
+      </handler>
+      <handler
+            class="com.nescar.examples.actions.handlers.NescInfoHandler"
+            commandId="com.nescar.examples.actions.commands.nescInfoCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.nescar.examples.actions.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+      <key
+            commandId="com.nescar.examples.actions.commands.nescInfoCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="com.nescar.examples.actions.menus.sampleMenu"
+               label="Sample Menu"
+               mnemonic="M">
+            <command
+                  commandId="com.nescar.examples.actions.commands.sampleCommand"
+                  id="com.nescar.examples.actions.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+         <menu
+               id="com.nescar.examples.actions.menus.nescInfo"
+               label="Nesc Information"
+               mnemonic="N">
+            <command
+                  commandId="com.nescar.examples.actions.commands.nescInfoCommand"
+                  id="com.nescar.examples.actions.menus.nescInfoCommand">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.nescar.examples.actions.toolbars.sampleToolbar">
+            <command
+                  id="com.nescar.examples.actions.toolbars.sampleCommand"
+                  commandId="com.nescar.examples.actions.commands.sampleCommand"
+                  icon="icons/sample.png"
+                  tooltip="Say hello world">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

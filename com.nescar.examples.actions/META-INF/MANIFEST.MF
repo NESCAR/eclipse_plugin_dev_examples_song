@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Actions
+Bundle-SymbolicName: com.nescar.examples.actions;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.nescar.examples.actions.Activator
+Bundle-Vendor: NESCAR
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: com.nescar.examples.actions
+Bundle-ActivationPolicy: lazy
